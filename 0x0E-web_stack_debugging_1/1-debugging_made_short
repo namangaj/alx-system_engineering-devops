@@ -1,6 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script installs and configures Nginx to listen on port 80
 
+# Update package lists and install Nginx
 apt-get update
 apt-get install -y nginx
+
+# Configure Nginx to listen on port 80
 sed -i 's/listen [::]:80 default_server;/listen [::]:80;/g' /etc/nginx/sites-available/default
+
+# Restart Nginx service
 systemctl restart nginx
