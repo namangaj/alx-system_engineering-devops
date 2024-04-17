@@ -1,0 +1,17 @@
+As we navigate the vast landscape of the internet, we often take for granted the intricate dance that occurs behind the scenes when we enter a URL into our browser's address bar and hit Enter. In this blog post, we will embark on a journey through the various layers of the web stack to unravel the mystery of what happens when we type "https://www.google.com" and press Enter.
+
+DNS Request: Our journey begins with a Domain Name System (DNS) request. When we type a URL into our browser, such as "https://www.google.com," our computer needs to translate the human-readable domain name "www.google.com" into an IP address. It sends a DNS request to a DNS server, which responds with the corresponding IP address of Google's servers.
+
+TCP/IP: Armed with the IP address, our computer establishes a Transmission Control Protocol (TCP) connection with the destination server using the Internet Protocol (IP). TCP ensures reliable communication by breaking data into packets and managing their transmission and reassembly at the destination.
+
+Firewall: Before our request reaches the destination server, it may encounter a firewall—a security measure that monitors and controls incoming and outgoing network traffic based on predetermined security rules. The firewall ensures that only legitimate and authorized traffic is allowed to pass through.
+
+HTTPS/SSL: In our modern web ecosystem, security is paramount. As our browser communicates with the server, it initiates a secure Hypertext Transfer Protocol Secure (HTTPS) connection using Secure Socket Layer (SSL) or Transport Layer Security (TLS) protocols. This encryption layer ensures that the data exchanged between our browser and the server remains confidential and tamper-proof.
+
+Load-Balancer: Upon reaching Google's servers, our request may encounter a load balancer—a crucial component of high-traffic websites. Load balancers distribute incoming traffic across multiple servers to optimize resource utilization, improve reliability, and ensure high availability. They intelligently route requests based on factors like server health and current load.
+
+Web Server: Once our request is directed to an appropriate server, it is handled by a web server software such as Apache, Nginx, or Microsoft IIS. The web server processes our request, retrieves the requested resources (such as HTML, CSS, and JavaScript files), and generates an appropriate response.
+
+Application Server: In dynamic web applications, the web server may need to interact with an application server, which executes server-side code to generate dynamic content. This could involve querying a database, processing business logic, or performing other computational tasks.
+
+Database: If our request requires data from a database, the application server communicates with the database server to retrieve or modify the required information. Databases store and manage structured data, providing a persistent storage solution for web applications.

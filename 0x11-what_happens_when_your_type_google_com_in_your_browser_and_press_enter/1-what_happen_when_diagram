@@ -1,0 +1,13 @@
+Schema illustrating the flow of the request when typing "https://www.google.com" in the browser:
+
+Diagram link: https://drive.google.com/file/d/1Bpg33srtHGtKbhqD4VE9qfmV7WYV-Aha/view?usp=drive_link
+
+
+In this diagram:
+
+The request begins with DNS resolution, translating the domain name "www.google.com" to an IP address.
+The request is encrypted (HTTPS) and passes through a firewall for security.
+The encrypted request hits the server IP on the appropriate port.
+The request is distributed via a load balancer to ensure efficient resource utilization.
+The web server serves a web page in response to the request.
+The application server generates the web page, possibly querying a database for data.
