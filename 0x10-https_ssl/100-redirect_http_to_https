@@ -33,11 +33,16 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
+<<<<<<< HEAD
 frontend clicksin-tech-frontend
+=======
+frontend clicksin-frontend
+>>>>>>> c8503d4500d8bfca97623d91a33f726415ad354c
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
+<<<<<<< HEAD
         default_backend clicksin-tech-backend
 
 frontend clicksin-tech-frontend-https
@@ -46,6 +51,16 @@ frontend clicksin-tech-frontend-https
         default_backend clicksin-tech-backend
 
 backend clicksin-tech-backend
+=======
+        default_backend clicksin-backend
+
+frontend clicksin-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/clicksin.tech.pem
+        http-request set-header X-Forwarded-Proto https
+        default_backend clicksin-backend
+
+backend clicksin-backend
+>>>>>>> c8503d4500d8bfca97623d91a33f726415ad354c
         balance roundrobin
         server 463747-web-01 18.233.62.73:80 check
         server 463747-web-02 54.236.43.123:80 check
