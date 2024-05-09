@@ -1,4 +1,10 @@
+#!/usr/bin/python3
+"""
+Script that queries subscribers on a given Reddit subreddit.
+"""
+
 import requests
+import sys
 
 def number_of_subscribers(subreddit):
     """Return the total number of subscribers on a given subreddit."""
@@ -16,7 +22,11 @@ def number_of_subscribers(subreddit):
     else:
         return "nonexisting subreddit"
 
-# Example usage:
-subreddit = "programming"
-result = number_of_subscribers(subreddit)
-print(f"Output: {result}")
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python script.py subreddit_name")
+        sys.exit(1)
+
+    subreddit_name = sys.argv[1]
+    result = number_of_subscribers(subreddit_name)
+    print("Output:", result)
