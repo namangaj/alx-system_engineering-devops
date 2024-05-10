@@ -1,16 +1,4 @@
 #!/usr/bin/env bash
-
-# Ensure script is run as root
-if [ "$(id -u)" -ne 0 ]; then
-    echo "This script must be run as root" >&2
-    exit 1
-fi
-
-# Update Nginx configuration to run as the nginx user
 sed -i 's/user\s*nginx;/user nginx;/g' /etc/nginx/nginx.conf
-
-# Update Nginx configuration to listen on port 8080
 sed -i 's/listen\s*80;/listen 8080;/g' /etc/nginx/sites-available/default
-
-# Restart Nginx service
 service nginx restart
