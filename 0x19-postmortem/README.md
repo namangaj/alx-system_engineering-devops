@@ -40,4 +40,4 @@ Corrective and Preventative Measures:
 •	Conduct thorough review of load balancer configurations to identify and correct any remaining misconfigurations.
 •	Develop and implement automated testing procedures to validate load balancer functionality after configuration changes.
 •	Enhance monitoring and alerting systems to provide more granular visibility into web stack performance and health.
-
+https://github.com/namangaj/alx-system_engineering-devops/blob/main/Web%20downtime%20image.JPG
